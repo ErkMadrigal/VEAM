@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cabin+Condensed|Kaushan+Script&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+    padding: 0;
+    margin: 0;
+    
+}
+hr{
+    height: 1px;
+    border:none;
+    background: #7a7a7a;
+    margin: 0 auto;
+}
+
+
+h1{
+    font-weight: normal;
+}
+.logo{
+    font-family:'Pacifico';
+    font-size: 30px;
+}
+.main_logo{
+    z-index: 1000;
+    height: 280px;
+    padding: 20px;
+    background: #019CDE;
+    color: #FFFF; 
+    cursor: default;
+}
+.logo_small{
+    display: inline-block;
+    font-size: 20px;
+    padding: 4px;
+    margin-right:50px;
+    color:#019CDE;
+    cursor: pointer; 
+}
+.nav{
+    z-index: 999;
+    float:left;
+    width: 100%;
+    background: #222;
+    color: #FFF;
+    padding: 0 0px;
+    transition: .3s ease all;
+    backface-visibility: hidden;
+    transform: translate(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.nav .wrap{
+    position: relative;
+    left: -150px;
+    transition: 0.4s ease all;
+    width: 100%;
+}
+
+nav{
+    display: inline-block;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+nav li{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+nav a{
+    font-family: 'Cabin Condensed', sans-serif;
+    display: block;
+    padding:  20px;
+    margin:0;
+    color:white;
+    text-decoration: none;
+    transition: 0.2s ease all;
+}
+
+nav a:hover{
+    color:white;
+    background: #019CDE;
+    text-decoration: none;
+}
+.main{
+    background: white;
+    padding: 80px;
+}
+
+body.nav_fixed .nav{
+    position:fixed;
+    top:0;
+    z-index: 999;
+}
+body.nav_fixed .nav .wrap{
+    left:0;
+}
+
+.btn_menu{
+    width: 60px;
+    height: 60px;
+    padding:22px;
+    text-align:center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #019CDE;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: all 500ms cubic-bezier(1,0,0,1);
+    transform: translateX(100px);
+}
+.btn_menu:hover{
+    transform: scale(1.2);
+    background: #42acfa;
+}
+
+/*Menu Responsivo*/
+
+@media screen and (max-width: 800px){
+    .btn_menu{
+        transform: translateX(0px);
+    }
+    .main_logo{
+        display: none;
+    }
+    .nav{
+        z-index: 9999;
+        width: 70%;
+        position: fixed;
+        top:0;
+        height: 100vh;
+        padding: 0px;
+        transform: translateX(-100%);
+    }
+    .nav .wrap{
+        left: 0;
+    }
+    nav{
+        width: 100%;
+        position: absolute;
+        top:60px;
+    }
+    nav li{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    .logo_small{
+        position:absolute;
+        top:10px;
+        left: 10px;
+    }
+    nav a{
+        width: 100%;
+        display: block;
+        padding: 20px;
+        margin: 0;
+    }
+    .nav-toggle{
+        z-index: 999;
+        transition: all 300ms cubic-bezier(1,0,0,1);
+        transform: translateX(0%);
+    }
+
+    .main{
+        background: white;
+        padding: 20px;
+    }
+}
+
+.geometry{
+    width: 100%;
+    height: 10rem;
+    clip-path: polygon(100% 0, 92% 100%, 0 100%, 0 0);
+}
+.mvv{
+    font-family: 'Vibes', cursive;
+    font-size: 2rem;
+    padding-top: 31%;
+}
+/*==========================================
+        dispositivos small
+===========================================*/
+@media (max-width: 991.98px) { 
+    .geometry{
+        clip-path : none;
+    }
+    .mvv{
+        padding: 1rem;
+    }
+
+}
+
+.rombo{
+    height: 20rem;
+    width: 20rem;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+}
+
+.letra{
+    margin-top: 2rem; 
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    color:white;
+}
+.letName{
+    font-family: 'Cabin Condensed', sans-serif;
+     font-size:2rem;
+     text-align: center;
+     display: block;
+    padding:  20px;
+    margin:0;
+    color:black;
+    text-decoration: none;
+    transition: 0.2s ease all;
+}
+
+.subName{
+    font-family: 'Cabin Condensed', sans-serif;
+     font-size:1rem;
+     text-align: center;
+     display: block;
+    padding:  20px;
+    margin:0;
+    color:black;
+    text-decoration: none;
+    transition: 0.2s ease all;
+}
+.sub{
+    font-family: 'Cabin Condensed', sans-serif;
+     font-size:1rem;
+     text-align: center;
+     display: block;
+    padding:  20px;
+    margin:0;
+    color:black;
+    text-decoration: none;
+    transition: 0.2s ease all;
+}
+.cardHover{
+    box-shadow: 9px 11px 20px rgba(0,0,0,0.3);
+    border-radius: 1rem;
+}
+a.ruteProd:hover{
+    text-decoration: none;
+}
+.cardHover:hover{
+    z-index: 1;
+    color:white;
+    background: rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: .5s ease all;
+    backface-visibility: hidden;
+    transform: translateZ(50px);
+    -webkit-transform: translate3d(0px,-30px,0px);
+    text-decoration: none;
+}
+
+
+
+/* login Admin*/
+* {margin: 0;padding: 0;font-family: sans-serif;border:0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+
+a:link, a:visited, a:active,a:hover {text-decoration: none;outline:0;}
+
+.sidemenu {background:rgb(1, 71, 222)!important;position:absolute;left:-20%;top:0;height:100%;overflow:hidden;transition: left .5s;}
+    .sidemenu ul {list-style:none;padding:20px}
+        .sidemenu ul li {display:block;border-bottom:1px solid rgb(32, 84, 255)}
+            .sidemenu ul li a:link,.sidemenu ul li a:active,.sidemenu ul li a:visited {display:block;padding:8px;color:rgba(252, 252, 252, 0.589);transition: 0.5s;}
+            .sidemenu ul li a:hover {background:rgb(232, 233, 236,.5);}
+
+.contenedor {display:inline;float:left;width:100%;padding:20px;transition: margin-left .5s;}
+
+section#contenedor_general{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: -1;
+	background-size: cover;
+	background-position: center 0px;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+section#body{
+	width: 100%;
+	min-height: 300px;
+	overflow: hidden;
+}
+
+section#scrolldown{
+	margin: auto;
+	width: 200px;
+	height: 60px;
+}
+
+p#titulo{
+	text-align: center;
+	font-weight: lighter;
+	font-size: 1.5em;
+	color: white;
+}
+
+p#menorque{
+	-webkit-transform: rotate(270deg);
+	text-align: center;
+	color: white;
+	font-size: 1.3em;
+}
+section#seccion{
+	width: 100%;
+	height: 100%;
+	margin-top: 20px;
+}
+
+
+.btn-men{
+    width: 60px;
+    height: 60px;
+    padding:22px;
+    text-align:center;
+    bottom: 20px;
+    right: 20px;
+    /*background: #019CDE;*/
+    background: rgb(1, 71, 222);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: all 500ms cubic-bezier(1,0,0,1);
+    transform: translateX(100px);
+}
+
+
+.widget p{
+    display: inline-block;
+    line-height: 1em;
+    color:#fff;
+}
+
+.fecha{
+    font-family: 'Cabin Condensed', sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 0.3215rem;
+    /*margin-bottom: 5px;*/
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    color:#fff;
+}
+.reloj{
+    font-family: 'Cabin Condensed', sans-serif;
+    width:100%;
+    font-size: 4em;
+    text-align: center;
+    background: rgba(0,0,0,.5);
+    color:#fff;
+}
+
+.reloj .caja-segundos{
+    display: inline-block;
+    color:#fff;
+}
+
+.reloj .segundos,
+.reloj .ampm{
+    font-size: 2rem;
+    display: block;
+    color:#fff;
+}
+.na{
+    float:left;
+    width: 100%;
+    background: #222;
+    color: #FFF;
+    padding: 0 0px;
+    transition: .3s ease all;
+    backface-visibility: hidden;
+    transform: translate(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    
+}
